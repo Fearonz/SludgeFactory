@@ -54,7 +54,7 @@ public class LeftToRight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("josh");
+            SceneManager.LoadScene("art");
         }
         else if (collision.gameObject.CompareTag("Block"))
         {

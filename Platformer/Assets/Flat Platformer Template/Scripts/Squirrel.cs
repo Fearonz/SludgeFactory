@@ -57,26 +57,28 @@ public class Squirrel : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (cam.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x + 0.2f)
-            mirror = false;
-        if (cam.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x - 0.2f)
-            mirror = true;
-
-        if (_inputAxis.x != 0)
+        if (!LevelController.instance.isPlant)
         {
-            rig.velocity = new Vector2(_inputAxis.x * WalkSpeed * Time.deltaTime, rig.velocity.y);
-        }
-        else
-        {
-            rig.velocity = new Vector2(0, rig.velocity.y);
-        }
+            if (cam.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x + 0.2f)
+                mirror = false;
+            if (cam.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x - 0.2f)
+                mirror = true;
 
-        if (_isJump)
-        {
-            rig.AddForce(new Vector2(0, JumpForce));
-            _canJump = false;
-            _isJump = false;
+            if (_inputAxis.x != 0)
+            {
+                rig.velocity = new Vector2(_inputAxis.x * WalkSpeed * Time.deltaTime, rig.velocity.y);
+            }
+            else
+            {
+                rig.velocity = new Vector2(0, rig.velocity.y);
+            }
+
+            if (_isJump)
+            {
+                rig.AddForce(new Vector2(0, JumpForce));
+                _canJump = false;
+                _isJump = false;
+            }
         }
     }
 
