@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{6e3723ac-b78b-4529-b67f-a2afd5820722}">
+		<property name="assetPath">
+			<value>ESM_Explainer_Video_One_Shot_Pops_Bubble_3_Fun_Cute_Drip_Wet.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.20661458333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{08f754a4-ef99-4f44-8905-33430bd06ebc}</destination>
+		</relationship>
+	</object>
+</objects>
