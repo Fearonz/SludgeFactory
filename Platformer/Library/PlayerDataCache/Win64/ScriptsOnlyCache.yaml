@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor-firstpass.dll:
+    - FMODUnity.EditorBankRef
+    - FMODUnity.EditorEventRef
     - FMODUnity.EventCache
     Assembly-CSharp-firstpass.dll:
     - FMODUnity.Settings
+    - FMODUnity.StudioEventEmitter
+    - FMODUnity.StudioListener
     Assembly-CSharp.dll:
     - CameraMove
     - GameOver
@@ -25,6 +29,16 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_SpriteAnimator
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -36,8 +50,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Flat Platformer Template/Scenes/art.unity:
     - Class: 1
@@ -62,8 +74,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -71,43 +81,49 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11302}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11912}
+      Script: {instanceID: 11758}
     - Class: 114
-      Script: {instanceID: 12020}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 12148}
+      Script: {instanceID: 12022}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12534}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 12718}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13354}
+      Script: {instanceID: 12992}
     - Class: 114
-      Script: {instanceID: 13406}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 13724}
+      Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 13848}
+      Script: {instanceID: 13358}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13924}
+      Script: {instanceID: 13728}
+    - Class: 114
+      Script: {instanceID: 13852}
+    - Class: 114
+      Script: {instanceID: 13868}
+    - Class: 114
+      Script: {instanceID: 13928}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -255,6 +271,18 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -485,7 +513,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: b7eec7b601f800045b832a3a5a1ac703
+      Hash: 1565771a3e9920352c31856ca851da59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlantScript
@@ -567,6 +595,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Trigger
   - hash:
       serializedVersion: 2
       Hash: 7ff2206f2e3bd68f3e2eec9c44b8dda2
@@ -882,4 +916,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Flat Platformer Template/Scenes/art.unity
-  playerPath: C:/Users/jdaly/OneDrive/Desktop/Unity/ggg2020/Platformer.exe
+  playerPath: C:/Users/jdaly/OneDrive/Desktop/Unity/ggg2020/Build/Platformer.exe

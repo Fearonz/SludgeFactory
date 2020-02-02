@@ -7,10 +7,15 @@ public class Seeder : MonoBehaviour
     public GameObject seed;
 
     public bool canDrop = true;
-    
+    FMOD.Studio.EventInstance playSeedPop;
+
+    private void Awake()
+    {
+        playSeedPop = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Plant/plant_seed");
+    }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,9 +23,10 @@ public class Seeder : MonoBehaviour
     {
         if (LevelController.instance.canDrop)
         {
-            if (Input.GetKeyDown("g")&& !LevelController.instance.isPlant){
-               GameObject temp= Instantiate(seed, transform.position, Quaternion.Euler(0, 0, 0), transform);
-
+            if (Input.GetKeyDown("g") && !LevelController.instance.isPlant)
+            {
+                GameObject temp = Instantiate(seed, transform.position, Quaternion.Euler(0, 0, 0), transform);
+                playSeedPop.start();
                 temp.GetComponent<Rigidbody2D>().velocity = new Vector3(2, 1, 0);
                 LevelController.instance.canDrop = false;
 
