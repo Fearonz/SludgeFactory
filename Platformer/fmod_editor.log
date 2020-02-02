@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001C3F0485168 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000023FA87B0C68 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,100 +15,13 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SoundI::release                          : SUT_LONG_SLIME (000001C3F0D73788)
-[LOG] SoundI::release                          :     SUT_LONG_SLIME (000001C3AE0510A8)
-[LOG] SoundI::release                          :     SUT_LONG_SLIME (000001C3AE42DF98)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] SystemI::createSound                     : filename = fmodProject\FmodProject\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001C3AB2DC768 : node = 000001C3AE431FA0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001C3F0D7B3E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C3AB2DC768
-[LOG] SystemI::createSoundInternal             :     Create name='fmodProject\FmodProject\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6698464
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10944
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C3AE4320B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Main Theme', format=2, channels=2, frequency=48000, lengthbytes=3249152, lengthpcm=12293250, pcmblocksize=0, loopstart=0, loopend=12287998, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.972717.
-[LOG] SystemI::createSound                     :     filename = fmodProject\FmodProject\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000001C3AB2DCE28 : node = 000001C3AE431460
-[LOG] SystemI::createSound                     :     add node to async list : head = 000001C3F0D7B3E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C3AB2DC768
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C3AB2DCE28
-[LOG] SystemI::createSoundInternal             :     Create name='fmodProject\FmodProject\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6698464
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10944
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C3AE431570
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CaveAmbienceDrips_HV.138', format=2, channels=2, frequency=48000, lengthbytes=1787904, lengthpcm=5796352, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.198695.
-[LOG] SystemI::createSound                     :     filename = fmodProject\FmodProject\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000001C3AB2DCAC8 : node = 000001C3AE432220
-[LOG] SystemI::createSound                     :     add node to async list : head = 000001C3F0D7B3E8.  list count = 0
-[LOG] SoundI::getSubSound                      :     sound 000001C3AB2DC768.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     starting non blocking seek and setting sound to not ready state
-[LOG] SoundI::getSubSound                      :     finished preparing nonblocking getSubSound seek
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C3AB2DCE28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C3AB2DCAC8
-[LOG] SystemI::createSoundInternal             :     Create name='fmodProject\FmodProject\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6698464
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10944
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C3AE432330
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SUT_LONG_SLIME', format=2, channels=2, frequency=48000, lengthbytes=703808, lengthpcm=2616702, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C3AB2DCAC8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C3AB2DE0B8
-[LOG] AsyncThread::threadFunc                  :     done setposition
-[LOG] AsyncThread::threadFunc                  :     done flush
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C3AB2DE0B8
-[LOG] SoundI::getSubSound                      : sound 000001C3AB2DCE28.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000001C3AB2DCAC8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Main Theme (000001C3F0D735D8)
-[LOG] SoundI::release                          :     Main Theme (000001C3AE050D68)
-[LOG] SoundI::release                          :     Main Theme (000001C3AE42DDE8)
-[LOG] SoundI::release                          : CaveAmbienceDrips_HV.138 (000001C3F0D726A8)
-[LOG] SoundI::release                          :     CaveAmbienceDrips_HV.138 (000001C3AE050F08)
-[LOG] SoundI::release                          :     CaveAmbienceDrips_HV.138 (000001C3AE42D3C8)
-[LOG] SoundI::release                          : SUT_LONG_SLIME (000001C3AB2DCAC8)
-[LOG] SoundI::release                          :     SUT_LONG_SLIME (000001C3AE051F48)
-[LOG] SoundI::release                          :     SUT_LONG_SLIME (000001C3AB2DCC78)
-[LOG] SoundI::release                          : Main Theme (000001C3AB2DC768)
-[LOG] SoundI::release                          :     Main Theme (000001C3AE053468)
-[LOG] SoundI::release                          :     Main Theme (000001C3AB2DE0B8)
-[LOG] SoundI::release                          : CaveAmbienceDrips_HV.138 (000001C3AB2DCE28)
-[LOG] SoundI::release                          :     CaveAmbienceDrips_HV.138 (000001C3AE051DA8)
-[LOG] SoundI::release                          :     CaveAmbienceDrips_HV.138 (000001C3AB2DD698)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6

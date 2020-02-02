@@ -19,7 +19,9 @@ public class Seeder : MonoBehaviour
         if (LevelController.instance.canDrop)
         {
             if (Input.GetKeyDown("g")&& !LevelController.instance.isPlant){
-                Instantiate(seed, transform.position, Quaternion.Euler(0, 0, 0), transform);
+               GameObject temp= Instantiate(seed, transform.position, Quaternion.Euler(0, 0, 0), transform);
+
+                temp.GetComponent<Rigidbody2D>().velocity = new Vector3(2, 1, 0);
                 LevelController.instance.canDrop = false;
 
             }

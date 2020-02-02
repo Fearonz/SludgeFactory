@@ -30,6 +30,7 @@ public class PlantScript : MonoBehaviour
         // lineRender.positionCount = aPoint +1;
         print("here");
         headI = Instantiate(PlantHead, gameObject.transform.position, Quaternion.Euler(0, 0, 0), gameObject.transform);
+        Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
         //gameObject.SetActive(false);
 
         canUp = true;
@@ -78,7 +79,7 @@ public class PlantScript : MonoBehaviour
                     //    lineRender.positionCount++;
                     //}
                     // lineRender.positionCount++;
-                    print("up key pressed");
+                    Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                 }
                 else
                     if (Input.GetKeyDown("left") && canLeft)
@@ -95,7 +96,7 @@ public class PlantScript : MonoBehaviour
                     //{
                     //    lineRender.positionCount++;
                     //}
-                    print("left key pressed");
+                    Instantiate(HorizontalBranch, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -270), gameObject.transform);
                 }
                 else
                     if (Input.GetKeyDown("right") && canRight)
@@ -111,7 +112,7 @@ public class PlantScript : MonoBehaviour
                     //{
                     //    lineRender.positionCount++;
                     //}
-                    print("right key pressed");
+                    Instantiate(HorizontalBranch, actual + new Vector3(lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
                 }
                 else
                     if (Input.GetKeyDown("down") && canDown)
@@ -127,7 +128,7 @@ public class PlantScript : MonoBehaviour
                     //{
                     //    lineRender.positionCount++;
                     //}
-                    print("down key pressed");
+                    Instantiate(VerticalBranch, actual + new Vector3(0, 0- lineLen / 2, 0), Quaternion.Euler(0, 0, 180), gameObject.transform);
                 }
                 else if (Input.GetKeyDown("h"))
                 {
@@ -161,19 +162,19 @@ public class PlantScript : MonoBehaviour
                     // new collider collider
                     if (!canLeft)
                     {
-                        Instantiate(HorizontalBranch, actual + new Vector3(lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
+                       // Instantiate(HorizontalBranch, actual + new Vector3(lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
 
                     }
                     else if (!canRight)
                     {
-                        Instantiate(HorizontalBranch, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
+                        //Instantiate(HorizontalBranch, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
                     }
                     else if (!canDown)
                     {
-                        Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2,0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                       // Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2,0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     }else
                     {
-                        Instantiate(VerticalBranch, actual + new Vector3(0, -lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                        //Instantiate(VerticalBranch, actual + new Vector3(0, -lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     }
 
                 }

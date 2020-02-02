@@ -49,9 +49,14 @@ public class PlayerPlatformerController : PhysicsObject
 
        // animator.SetBool("jumping", grounded);
          animator.SetBool("grounded", grounded);
-        Debug.Log(Mathf.Abs(velocity.x) / maxSpeed);
+        //Debug.Log(Mathf.Abs(velocity.x) / maxSpeed);
         animator.SetFloat("speed", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
+    }
+
+    public void Death()
+    {
+        animator.Play("Death");
     }
 }
