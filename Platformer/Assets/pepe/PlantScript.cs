@@ -15,7 +15,8 @@ public class PlantScript : MonoBehaviour
     public GameObject VerticalBranch;
     public GameObject HorizontalBranch;
     int lineLen = 2;
-    float speed = 1.5f;
+    float speed = 3f;
+    public float destroyTime = 10f;
     bool canUp, canDown, canRight, canLeft;
     void Start()
     {
@@ -128,11 +129,14 @@ public class PlantScript : MonoBehaviour
                     //}
                     print("down key pressed");
                 }
-                else if (Input.GetKeyDown("g"))
+                else if (Input.GetKeyDown("h"))
                 {
                     //stop
                     isDone = true;
                     LevelController.instance.isPlant = false;
+
+                    Destroy(gameObject, 13);
+
                     print("p key pressed");
                 }
 
@@ -148,9 +152,9 @@ public class PlantScript : MonoBehaviour
                 if (Vector3.Distance(headI.transform.position, nextStop) < 0.001 && isMoving)
                 {
                     //  Debug.Log("reach");
-                    arrowsRender.SetActive(true);
-                    arrowsRender.GetComponentInChildren<SpriteRenderer>().sprite = arrows[0];
-                    arrowsRender.transform.position = nextStop + new Vector3(0, 1, +5);
+                   // arrowsRender.SetActive(true);
+                   // arrowsRender.GetComponentInChildren<SpriteRenderer>().sprite = arrows[0];
+                  //  arrowsRender.transform.position = nextStop + new Vector3(0, 1, +5);
                     isMoving = false;
                     aPoint++;
 
@@ -164,9 +168,12 @@ public class PlantScript : MonoBehaviour
                     {
                         Instantiate(HorizontalBranch, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
                     }
-                    else
+                    else if (!canDown)
                     {
                         Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2,0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    }else
+                    {
+                        Instantiate(VerticalBranch, actual + new Vector3(0, -lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     }
 
                 }

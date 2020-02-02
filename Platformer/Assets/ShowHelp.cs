@@ -11,7 +11,7 @@ public class ShowHelp : MonoBehaviour
         HelpImage.SetActive(false);
     }
 
-    public void Click()
+    public void ClickForShow()
     {
         if(HelpImage.active == true)
         {
