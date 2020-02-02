@@ -15,7 +15,7 @@ public class PlantScript : MonoBehaviour
     public GameObject VerticalBranch;
     public GameObject HorizontalBranch;
     int lineLen = 2;
-    float speed = 5f;
+    float speed = 1.5f;
     bool canUp, canDown, canRight, canLeft;
     void Start()
     {
@@ -166,7 +166,7 @@ public class PlantScript : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                        Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2,0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     }
 
                 }
