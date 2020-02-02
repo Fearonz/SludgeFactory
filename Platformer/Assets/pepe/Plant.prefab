@@ -184,6 +184,10 @@ MonoBehaviour:
   arrowsRender: {fileID: 7671537602102849366}
   PlantCollider: {fileID: 6206251327305617680, guid: f08d6dac3767c204688e7cae37d73b89,
     type: 3}
+  VerticalBranch: {fileID: 3657598269891110328, guid: 50715bff69f700e4e9052d73ad6af0b8,
+    type: 3}
+  HorizontalBranch: {fileID: 3680394622444788722, guid: 889e30197e66de244b4a82b954244e74,
+    type: 3}
 --- !u!1 &7671537602102849366
 GameObject:
   m_ObjectHideFlags: 0

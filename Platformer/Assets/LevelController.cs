@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
 
 
     public bool isPlant = false;
+    public bool canDrop = true;
     void Start()
     {
 

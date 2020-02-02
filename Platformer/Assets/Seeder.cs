@@ -7,6 +7,7 @@ public class Seeder : MonoBehaviour
     public GameObject seed;
 
     public bool canDrop = true;
+    
     void Start()
     {
         
@@ -15,10 +16,12 @@ public class Seeder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canDrop)
+        if (LevelController.instance.canDrop)
         {
             if (Input.GetKeyDown("g")&& !LevelController.instance.isPlant){
                 Instantiate(seed, transform.position, Quaternion.Euler(0, 0, 0), transform);
+                LevelController.instance.canDrop = false;
+
             }
         }
     }

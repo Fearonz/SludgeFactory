@@ -50,17 +50,17 @@ public class LeftToRight : MonoBehaviour
         );
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("art");
         }
-        else if (collision.gameObject.CompareTag("Block"))
+        else if (col.gameObject.CompareTag("Block"))
         {
             changeDirection = true;
         }
-        else if (collision.gameObject.CompareTag("Plant"))
+        else if (col.gameObject.CompareTag("Plant"))
         {
             stop = true;
         }
@@ -70,9 +70,9 @@ public class LeftToRight : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D col)
     {
-        if (collision.gameObject.CompareTag("Plant"))
+        if (col.gameObject.CompareTag("Plant"))
         {
             stop = false;
         }

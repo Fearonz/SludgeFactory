@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Sludge : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Debug.Log("col");
+        if (col.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("art");
         }

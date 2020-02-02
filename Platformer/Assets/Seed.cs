@@ -7,7 +7,7 @@ public class Seed : MonoBehaviour
     public GameObject Plant;
     void Start()
     {
-        
+        Destroy(gameObject, 2);
     }
 
     // Update is called once per frame
@@ -22,13 +22,17 @@ public class Seed : MonoBehaviour
     //        print("enter");
     //    }
     //}
-
+    private void OnDestroy()
+    {
+        LevelController.instance.canDrop = true;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "fertil")
         {
             Instantiate(Plant,transform.position + new Vector3(0,-0.1f,0),Quaternion.Euler(0,0,0), GameObject.Find("PlantHolder").transform);
             LevelController.instance.isPlant = true;
+           
             Destroy(gameObject);
         }
     }

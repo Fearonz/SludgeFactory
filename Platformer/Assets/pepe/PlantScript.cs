@@ -12,8 +12,10 @@ public class PlantScript : MonoBehaviour
     public GameObject arrowsRender;
     public GameObject PlantCollider;
     private GameObject headI;
+    public GameObject VerticalBranch;
+    public GameObject HorizontalBranch;
     int lineLen = 2;
-    float speed = 1.5f;
+    float speed = 5f;
     bool canUp, canDown, canRight, canLeft;
     void Start()
     {
@@ -69,6 +71,7 @@ public class PlantScript : MonoBehaviour
                     nextStop = actual + new Vector3(0, lineLen, 0);
                     isMoving = true;
                     arrowsRender.SetActive(false);
+                    headI.transform.rotation = Quaternion.Euler(0, 0, 0);
                     //if (lineRender.positionCount < (aPoint + 1))
                     //{
                     //    lineRender.positionCount++;
@@ -85,6 +88,8 @@ public class PlantScript : MonoBehaviour
                     nextStop = actual + new Vector3(-lineLen, 0, 0);
                     isMoving = true;
                     arrowsRender.SetActive(false);
+                    headI.transform.rotation = Quaternion.Euler(0, 0, 90);
+
                     //if (lineRender.positionCount < (aPoint + 1))
                     //{
                     //    lineRender.positionCount++;
@@ -100,6 +105,7 @@ public class PlantScript : MonoBehaviour
                     nextStop = actual + new Vector3(lineLen, 0, 0);
                     isMoving = true;
                     arrowsRender.SetActive(false);
+                    headI.transform.rotation = Quaternion.Euler(0, 0, -90);
                     //if (lineRender.positionCount < (aPoint + 1))
                     //{
                     //    lineRender.positionCount++;
@@ -115,6 +121,7 @@ public class PlantScript : MonoBehaviour
                     nextStop = actual + new Vector3(0, -lineLen, 0);
                     isMoving = true;
                     arrowsRender.SetActive(false);
+                    headI.transform.rotation = Quaternion.Euler(0, 0, 180);
                     //if (lineRender.positionCount < (aPoint + 1))
                     //{
                     //    lineRender.positionCount++;
@@ -150,12 +157,16 @@ public class PlantScript : MonoBehaviour
                     // new collider collider
                     if (!canLeft)
                     {
-                        Instantiate(PlantCollider, actual + new Vector3(lineLen / 2, 0, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                        Instantiate(HorizontalBranch, actual + new Vector3(lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
 
                     }
                     else if (!canRight)
                     {
-                        Instantiate(PlantCollider, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                        Instantiate(HorizontalBranch, actual + new Vector3(-lineLen / 2, 0, 0), Quaternion.Euler(0, 0, -90), gameObject.transform);
+                    }
+                    else
+                    {
+                        Instantiate(VerticalBranch, actual + new Vector3(0, lineLen / 2, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     }
 
                 }
