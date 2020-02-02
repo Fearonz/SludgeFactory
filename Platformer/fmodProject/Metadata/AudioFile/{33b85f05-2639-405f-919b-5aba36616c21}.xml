@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{33b85f05-2639-405f-919b-5aba36616c21}">
+		<property name="assetPath">
+			<value>SUT_SNAP_SLIME_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.47315192743764173</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{08f754a4-ef99-4f44-8905-33430bd06ebc}</destination>
+		</relationship>
+	</object>
+</objects>
