@@ -5,6 +5,8 @@ public class Button : MonoBehaviour
     public string doorName;
     private bool closed;
 
+    public Sprite closedSprite;
+
     void Start()
     {
         closed = true;
